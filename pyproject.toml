@@ -1,0 +1,20 @@
+[project]
+name = "ru-banks-xlsx-parser"
+version = "0.1.0"
+description = "Default template for PDM package"
+authors = [
+    {name = "Dmitriy Gonozov", email = "gonozov0@yandex.com"},
+]
+dependencies = [
+    "openpyxl>=3.1.2",
+    "google-api-python-client>=2.116.0",
+    "google-auth-httplib2>=0.2.0",
+    "google-auth-oauthlib>=1.2.0",
+]
+requires-python = "==3.11.*"
+readme = "README.md"
+license = {text = "MIT"}
+
+
+[tool.pdm]
+distribution = false
