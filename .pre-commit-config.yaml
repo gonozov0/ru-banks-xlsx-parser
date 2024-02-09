@@ -1,0 +1,13 @@
+repos:
+  - repo: local
+    hooks:
+      - id: ruff-lint
+        name: ruff linter
+        language: system
+        types: [python]
+        entry: pdm run ruff_format_check
+      - id: ruff-format
+        name: ruff formatter
+        language: system
+        types: [python]
+        entry: pdm run ruff_lint_check

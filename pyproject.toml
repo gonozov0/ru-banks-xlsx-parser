@@ -10,6 +10,8 @@ dependencies = [
     "google-api-python-client>=2.116.0",
     "google-auth-httplib2>=0.2.0",
     "google-auth-oauthlib>=1.2.0",
+    "pydantic[dotenv]>=2.6.1",
+    "pydantic-settings>=2.1.0",
 ]
 requires-python = "==3.11.*"
 readme = "README.md"
@@ -18,3 +20,54 @@ license = {text = "MIT"}
 
 [tool.pdm]
 distribution = false
+
+[tool.pdm.scripts]
+install_hooks = "pre-commit install"
+# linters
+ruff_lint_check = {shell = "echo ruff-linter: && ruff check src tests"}
+ruff_format_check = {shell = "echo ruff-formatter: && ruff format src tests --check"}
+ruff_lint = {shell = "echo ruff-linter: && ruff check src tests --fix"}
+ruff_format = {shell = "echo ruff-formatter: && ruff format src tests"}
+lint = {composite = ["ruff_lint", "ruff_format"]}
+lint_check = { composite = ["ruff_lint_check", "ruff_format_check"]}
+
+[tool.pdm.dev-dependencies]
+dev = [
+    "pre-commit>=3.6.0",
+    "ruff>=0.2.1",
+]
+
+# linters settings
+[tool.ruff]
+target-version = 'py310'
+line-length = 120
+lint.extend-select = [
+    "ASYNC",  # flake8-async
+    "E",  # pycodestyle [Error]
+    "F",  # PyFlakes
+    "I", # isort
+    "T20", # flake8-print
+    "RSE", # flake8-raise
+    "PT", # flake8-pytest-style
+]
+exclude = [
+    "**/migrations/*.py",
+    "src/pierce/settings",
+    "src/aio/settings",
+    "src/manage.py",
+    "src/media",
+    "venv",
+    ".venv",
+]
+lint.ignore = [
+    "PT019",  # X without value is injected as parameter, use `@pytest.mark.usefixtures` instead
+    "PT011",  # `pytest.raises(X)` is too broad, set the `match` parameter or use a more specific exception
+]
+
+[tool.ruff.lint.per-file-ignores]
+"__init__.py" = ["F401", "F403", "I001"]
+"src/pierce/events/models.py" = ["F401", "F403"]
+"src/pierce/subscriptions/apps.py" = ["F401"]
+
+[tool.ruff.lint.isort]
+lines-after-imports = 2
