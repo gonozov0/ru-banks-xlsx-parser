@@ -3,6 +3,7 @@ from datetime import datetime
 from typing import Any
 
 from src import dto
+from src.google_doc import categories
 
 
 logger = logging.getLogger(__name__)
@@ -27,7 +28,17 @@ class Sheet:
         return f"{self.sheet_name}!B{self.outcome_raw}"
 
     async def _insert_income(self, data: list[dto.IncomeOperation]):
-        body = {"values": [[_serialize_datetime(op.date), op.amount, op.description] for op in data]}
+        body = {
+            "values": [
+                [
+                    _serialize_datetime(op.date),
+                    op.amount,
+                    op.description,
+                    categories.get_income(op.description).value,
+                ]
+                for op in data
+            ]
+        }
         result = (
             self.service.spreadsheets()
             .values()
@@ -43,7 +54,17 @@ class Sheet:
         logger.debug("%s income cells updated.", result.get("updatedCells"))
 
     async def _insert_outcome(self, data: list[dto.OutcomeOperation]):
-        body = {"values": [[_serialize_datetime(op.date), op.amount, op.description] for op in data]}
+        body = {
+            "values": [
+                [
+                    _serialize_datetime(op.date),
+                    op.amount,
+                    op.description,
+                    categories.get_outcome(op.description, op.amount).value,
+                ]
+                for op in data
+            ]
+        }
         result = (
             self.service.spreadsheets()
             .values()
