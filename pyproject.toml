@@ -12,6 +12,7 @@ dependencies = [
     "google-auth-oauthlib>=1.2.0",
     "pydantic[dotenv]>=2.6.1",
     "pydantic-settings>=2.1.0",
+    "xlrd>=2.0.1",
 ]
 requires-python = "==3.11.*"
 readme = "README.md"
