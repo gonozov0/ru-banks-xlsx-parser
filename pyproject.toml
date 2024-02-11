@@ -24,6 +24,8 @@ distribution = false
 
 [tool.pdm.scripts]
 install_hooks = "pre-commit install"
+# run program
+start = {shell = "echo start transfer: && python -m src"}
 # linters
 ruff_lint_check = {shell = "echo ruff-linter: && ruff check src tests"}
 ruff_format_check = {shell = "echo ruff-formatter: && ruff format src tests --check"}

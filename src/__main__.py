@@ -14,7 +14,6 @@ logger = logging.getLogger(__name__)
 
 async def main():
     config = Config()
-    logger.info(creds.get_path(file_name=config.SERVICE_ACCOUNT_FILE))
     credentials = Credentials.from_service_account_file(
         filename=creds.get_path(file_name=config.SERVICE_ACCOUNT_FILE),
         scopes=config.SCOPES,
@@ -34,6 +33,7 @@ async def main():
         spreadsheet_id=config.SPREADSHEET_ID,
         sheet_name=config.SHEET_NAME,
     )
+
     await transfer.transfer_banks(banks_=[tochka, tinkoff, sber], sheet=google_sheet)
 
 
