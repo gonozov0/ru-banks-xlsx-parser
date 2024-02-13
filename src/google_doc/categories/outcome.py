@@ -63,6 +63,7 @@ _beauty_words = [
 ]
 _education_words = [
     "BOOSTY",
+    "smart-glocal",
 ]
 _sports_words = []
 _clothing_words = []
