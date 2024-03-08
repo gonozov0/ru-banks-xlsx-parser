@@ -3,7 +3,7 @@ from pydantic_settings import BaseSettings
 
 class Config(BaseSettings):
     SERVICE_ACCOUNT_FILE: str | None = None
-    SPREADSHEET_ID: str = "11OWyzjINHz-Zdpu2-FZmAQv6SYDB2eXBhe43uEvGM0U"
+    SPREADSHEET_ID: str = "1HLzOHzStaPeyLYcZBVLfX8VeTFRWNXKqu4sPFGJUPyc"
     SHEET_NAME: str = "Транзакции"
     SCOPES: list = ["https://www.googleapis.com/auth/spreadsheets"]
     TOCHKA_DIR_PATH: str = "data/tochka"

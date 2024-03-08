@@ -18,6 +18,8 @@ class OutcomeCategory(Enum):
     Clothing = "Одежда"
     Ozone = "Озон"
     Taxes = "Налоги"
+    Mortgage = "Ипотека"
+    Cat = "Кошка"
     Other = "Другое"
 
 
@@ -28,17 +30,21 @@ _food_words = [
     "WeWork Якиманка",
     "Красное и белое",
     "ВкусВилл",
+    "SHAVA - MAMA",
 ]
 _gifts_words = []
 _health_words = [
     "Apteka",
     "APTEKA",
     "OOO MEDAS-MOSKVA",
+    "MENTOR-MIND",
+    "MANELI",
 ]
 _household_words = [
     "PAY.MTS.RU",
     "MAGNIT MK",
     "СВС-Телеком",
+    "MosOblEIRC_EPR_1864",
 ]
 _transport_words = [
     "Yandex.Fuel",
@@ -48,37 +54,60 @@ _transport_words = [
     "MOSKVA METRO",
     "MOS.TRANSPORT",
     "CITYDRIVE",
+    "YANDEX.TAXI",
+    "YM *Drive",
 ]
 _entertainment_words = [
     "ONEPRICE",
+    "ONE PRICE COFFEE",
     "HAPPY COFFEE",
     "VESELAYA ZATEYA",
     "MYATA SIGNATURE",
     "BOONCAKE.CAFE",
+    "Steamstar",
+    "hardparty",
+    "SAD Lounge",
+    "TAYSPA",
+    "YANDEX.EDA",
+    "SMOKE PISTOLS GANG",
+    "AYN BAR",
+    "DUNE,PR-T YUBILEYNYY",
 ]
 _investments_words = []
 _travel_words = []
 _beauty_words = [
     "Достонбек Н.",
+    "IP PARSEGOVA LR,sh Nosovikhinskoye",
 ]
 _education_words = [
     "BOOSTY",
     "smart-glocal",
+    "YANDEX.CLOUD",
 ]
 _sports_words = []
-_clothing_words = []
+_clothing_words = [
+    "LAMODA",
+]
 _ozone_words = [
     "OZON",
     "WILDBERRIES",
     "Y.M*MARKET.YANDEX",
     "Aliexpress",
 ]
-_taxes_words = []
+_taxes_words = [
+    "Единый налоговый платеж",
+]
+_cat_words = [
+    "SP DOBRYJ DOKTOR",
+    "ZOOMAGAZIN",
+]
 
 
 def get_outcome(description: str, amount: float) -> OutcomeCategory:
-    if amount == 45:
+    if amount in (45, 50, 90, 100):
         return OutcomeCategory.Transport
+    if amount == 92776:
+        return OutcomeCategory.Mortgage
 
     if shared.is_found(description, _food_words):
         return OutcomeCategory.Food
