@@ -12,8 +12,11 @@ def _deserialize_date(date: str) -> datetime:
 
 
 _filter_words = [
+    "Tochka Card2Card",
     "Перевод между счетами",
     "Дмитрий Г.",
+    "Перевод по запросу самому себе",
+    "Пополнение Кубышки",
 ]
 
 

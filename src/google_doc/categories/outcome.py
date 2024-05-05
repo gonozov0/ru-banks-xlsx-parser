@@ -27,35 +27,70 @@ _food_words = [
     "VKUSVILL",
     "KRASNOE I BELOE",
     "VV 6344",
+    "VV 7206",
+    "VV 6900",
     "WeWork Якиманка",
     "Красное и белое",
     "ВкусВилл",
     "SHAVA - MAMA",
+    "SAMOKAT",
+    "WeWork Якиманка",
+    "PAPA JOHNS",
+    "PEREKRESTOK AURA",
+    "LLC TRAVEL RETAIL SVO",
+    "PYATEROCHKA",
+    "IP SHAGIEVA I.I.,UNIVER., 7,INNOPOLIS,RU",
+    "MAGNIT",
+    "VERNYJ",
+    "MATRIKS FUD",
+    "KM PROSTAYA EDA K-5",
+    "Tyubetey kafe",
+    "BRISTOL",
 ]
-_gifts_words = []
+_gifts_words = [
+    "CVETY-BUKETY",
+    "GOLD APPLE",
+    "PODARKI",
+]
 _health_words = [
     "Apteka",
     "APTEKA",
     "OOO MEDAS-MOSKVA",
     "MENTOR-MIND",
     "MANELI",
+    "biochek.ru",
 ]
 _household_words = [
     "PAY.MTS.RU",
     "MAGNIT MK",
     "СВС-Телеком",
     "MosOblEIRC_EPR_1864",
+    "OOO RPK 2",
+    "Lotos",
+    "Мой телефон +7 915 998-65-73",
+    "ROSTELECOM.RU",
+    "GOSUSLUGI.RU",
 ]
 _transport_words = [
     "Yandex.Fuel",
-    "Payture*YANDEX GO",
     "RZD",
     "RZHD",
     "MOSKVA METRO",
     "MOS.TRANSPORT",
     "CITYDRIVE",
+    "Payture*YANDEX GO",
     "YANDEX.TAXI",
+    "YM *taxi",
+    "YM*taxi",
     "YM *Drive",
+    "Y.M*DRIVE",
+    "KOMSOMOLSKAYA,KOMSOMOLSKAYA SQ,2",
+    "URENT",
+    "Urentbike",
+    "Y.M*GO SCOOTER",
+    "YM*GO SCOOTER",
+    "KAZANMETRO.RU",
+    "DELIMOBIL",
 ]
 _entertainment_words = [
     "ONEPRICE",
@@ -72,19 +107,52 @@ _entertainment_words = [
     "SMOKE PISTOLS GANG",
     "AYN BAR",
     "DUNE,PR-T YUBILEYNYY",
+    "BIRMARKET",
+    "YM*PLUS",
+    "COFFEEWAY",
+    "Tangiers Lounge",
+    "TANGIERS LOUNGE",
+    "HOOKAHPLACE",
+    "COFFEE CAVA",
+    "COFFE CAVA",
+    "COFFEEIN",
+    "KSTB",
+    "OOO MEMSOL",
+    "LAUNZH BAR",
+    "BUDDU LOUNGE",
+    "netmonet,UL SOLNECHNAYA,DOM 7, OFI,VORONEZH,RU",
+    "booble mania",
+    "COFFEE TIME",
 ]
 _investments_words = []
-_travel_words = []
+_travel_words = [
+    "OOO POBEDA",
+    "FLYSMARTAVIA",
+    "KAZAN KREMLIN",
+    "PARKOMAT 1,STR PRIBREZHNAYA 2,SAVINO",
+    "MUZEJ",
+    "SUVENIR",
+    "MUZEY",
+]
 _beauty_words = [
     "Достонбек Н.",
     "IP PARSEGOVA LR,sh Nosovikhinskoye",
+    "OOO ESTETIKA",
 ]
 _education_words = [
     "BOOSTY",
     "smart-glocal",
     "YANDEX.CLOUD",
+    "SMART GLOCAL",
 ]
-_sports_words = []
+_trainers = [
+    ("Антон Ч.", 40000),
+    ("Андрей П.", 48000),
+]
+_sports_words = [
+    "FITNESS HOUSE",
+    "ALFA DZHIM",
+]
 _clothing_words = [
     "LAMODA",
 ]
@@ -96,6 +164,7 @@ _ozone_words = [
 ]
 _taxes_words = [
     "Единый налоговый платеж",
+    "GOSUSLUGI SHTRAFY",
 ]
 _cat_words = [
     "SP DOBRYJ DOKTOR",
@@ -104,11 +173,6 @@ _cat_words = [
 
 
 def get_outcome(description: str, amount: float) -> OutcomeCategory:
-    if amount in (45, 50, 90, 100):
-        return OutcomeCategory.Transport
-    if amount == 92776:
-        return OutcomeCategory.Mortgage
-
     if shared.is_found(description, _food_words):
         return OutcomeCategory.Food
     if shared.is_found(description, _gifts_words):
@@ -131,11 +195,21 @@ def get_outcome(description: str, amount: float) -> OutcomeCategory:
         return OutcomeCategory.Education
     if shared.is_found(description, _sports_words):
         return OutcomeCategory.Sports
+    for sub_desc, amount_ in _trainers:
+        if amount_ == amount and sub_desc in description:
+            return OutcomeCategory.Sports
     if shared.is_found(description, _clothing_words):
         return OutcomeCategory.Clothing
     if shared.is_found(description, _ozone_words):
         return OutcomeCategory.Ozone
     if shared.is_found(description, _taxes_words):
         return OutcomeCategory.Taxes
+    if shared.is_found(description, _cat_words):
+        return OutcomeCategory.Cat
+
+    if amount in (50, 100):
+        return OutcomeCategory.Transport
+    if amount == 92776:
+        return OutcomeCategory.Mortgage
 
     return OutcomeCategory.Other
