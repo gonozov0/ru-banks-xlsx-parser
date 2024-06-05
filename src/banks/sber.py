@@ -54,6 +54,7 @@ def _filter_income(description: str) -> bool:
 
 _outcome_filter_words = [
     "Дмитрий Сергеевич Г.",
+    "Дмитрий Сергеевич Г",
 ]
 
 

@@ -29,6 +29,7 @@ _food_words = [
     "VV 6344",
     "VV 7206",
     "VV 6900",
+    "VV 6903",
     "WeWork Якиманка",
     "Красное и белое",
     "ВкусВилл",
@@ -46,6 +47,12 @@ _food_words = [
     "KM PROSTAYA EDA K-5",
     "Tyubetey kafe",
     "BRISTOL",
+    "KRASNOE BELOE",
+    "O ESKIMO",
+    "DODO PIZZA",
+    "VINLAB",
+    "Верный",
+    "Пятёрочка",
 ]
 _gifts_words = [
     "CVETY-BUKETY",
@@ -91,6 +98,9 @@ _transport_words = [
     "YM*GO SCOOTER",
     "KAZANMETRO.RU",
     "DELIMOBIL",
+    "Ситидрайв",
+    "Яндекс.Заправки",
+    "Яндекс.Драйв",
 ]
 _entertainment_words = [
     "ONEPRICE",
@@ -123,6 +133,9 @@ _entertainment_words = [
     "netmonet,UL SOLNECHNAYA,DOM 7, OFI,VORONEZH,RU",
     "booble mania",
     "COFFEE TIME",
+    "Hookah Place",
+    "HOOKAPLACE",
+    "E-GO KARTING",
 ]
 _investments_words = []
 _travel_words = [
@@ -133,6 +146,9 @@ _travel_words = [
     "MUZEJ",
     "SUVENIR",
     "MUZEY",
+    "Яндекс.Путешествия",
+    "Аэрофлот",
+    "ИНДИВИДУАЛЬНЫЙ ПРЕДПРИНИМАТЕЛЬ БРЕМОВ БРЕМ АБДУКЕРИМОВИЧ",
 ]
 _beauty_words = [
     "Достонбек Н.",
@@ -152,6 +168,7 @@ _trainers = [
 _sports_words = [
     "FITNESS HOUSE",
     "ALFA DZHIM",
+    "OOO MEGASPORT",
 ]
 _clothing_words = [
     "LAMODA",
