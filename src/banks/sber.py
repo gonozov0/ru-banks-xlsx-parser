@@ -41,6 +41,7 @@ def _get_file_path(dir_path: str, file_name: str | None) -> str:
 _income_filter_words = [
     "Tochka Card2Card",
     "Тинькофф Банк",
+    "Т-Банк (Тинькофф)",
 ]
 
 

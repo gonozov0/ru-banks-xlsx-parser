@@ -53,11 +53,13 @@ _food_words = [
     "VINLAB",
     "Верный",
     "Пятёрочка",
+    "LENTA",
 ]
 _gifts_words = [
     "CVETY-BUKETY",
     "GOLD APPLE",
     "PODARKI",
+    "EKATERINBURG YABLOKO",
 ]
 _health_words = [
     "Apteka",
@@ -136,6 +138,12 @@ _entertainment_words = [
     "Hookah Place",
     "HOOKAPLACE",
     "E-GO KARTING",
+    "SYROVARNYA",
+    "DABLBI",
+    "COFFEE GALLERY",
+    "COFIX",
+    "JACKY JACKY LIFE",
+    "RESTORAN FINIST",
 ]
 _investments_words = []
 _travel_words = [
@@ -172,6 +180,8 @@ _sports_words = [
 ]
 _clothing_words = [
     "LAMODA",
+    "FAMILIA",
+    "OSTIN",
 ]
 _ozone_words = [
     "OZON",
