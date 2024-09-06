@@ -20,7 +20,7 @@ async def main():
     )
     service = build(serviceName="sheets", version="v4", credentials=credentials)
 
-    tochka = banks.Tochka(dir_path=config.TOCHKA_DIR_PATH, file_name=config.TOCHKA_FILE_NAME)
+    # tochka = banks.Tochka(dir_path=config.TOCHKA_DIR_PATH, file_name=config.TOCHKA_FILE_NAME)
     tinkoff = banks.Tinkoff(dir_path=config.TINKOFF_DIR_PATH, file_name=config.TINKOFF_FILE_NAME)
     sber = banks.Sber(
         income_dir_path=config.SBER_INCOME_DIR_PATH,
@@ -34,7 +34,7 @@ async def main():
         sheet_name=config.SHEET_NAME,
     )
 
-    await transfer.transfer_banks(banks_=[tochka, tinkoff, sber], sheet=google_sheet)
+    await transfer.transfer_banks(banks_=[tinkoff, sber], sheet=google_sheet)
 
 
 if __name__ == "__main__":

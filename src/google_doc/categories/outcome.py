@@ -54,12 +54,21 @@ _food_words = [
     "Верный",
     "Пятёрочка",
     "LENTA",
+    "Магнит",
+    "Tvoya Territoriya..",
+    "Столовая ИрНИТУ",
+    "Самокат",
+    "Трдельник",
+    "Кафе",
+    "Яндекс Лавка",
 ]
 _gifts_words = [
     "CVETY-BUKETY",
     "GOLD APPLE",
     "PODARKI",
     "EKATERINBURG YABLOKO",
+    "Parfum Oil",
+    "DNS",
 ]
 _health_words = [
     "Apteka",
@@ -68,6 +77,8 @@ _health_words = [
     "MENTOR-MIND",
     "MANELI",
     "biochek.ru",
+    "Аптека",
+    "Аптека «Апрель»",
 ]
 _household_words = [
     "PAY.MTS.RU",
@@ -79,6 +90,9 @@ _household_words = [
     "Мой телефон +7 915 998-65-73",
     "ROSTELECOM.RU",
     "GOSUSLUGI.RU",
+    "tome",  # vpn hidemy.name
+    "Магнит Косметик",
+    "Ростелеком",
 ]
 _transport_words = [
     "Yandex.Fuel",
@@ -103,6 +117,14 @@ _transport_words = [
     "Ситидрайв",
     "Яндекс.Заправки",
     "Яндекс.Драйв",
+    "Московский метрополитен",
+    "Whoosh",
+    "Самокаты - Яндекс Go",
+    "Делимобиль",
+    "Яндекс Такси",
+    "Яндекс Драйв",
+    "РЖД",
+    "Яндекс Заправки",
 ]
 _entertainment_words = [
     "ONEPRICE",
@@ -144,6 +166,11 @@ _entertainment_words = [
     "COFIX",
     "JACKY JACKY LIFE",
     "RESTORAN FINIST",
+    "Kofeynya",
+    "Hookan Place",
+    "FRANK by БАСТА",
+    "Шоколадница",
+    "Dune",
 ]
 _investments_words = []
 _travel_words = [
@@ -162,16 +189,19 @@ _beauty_words = [
     "Достонбек Н.",
     "IP PARSEGOVA LR,sh Nosovikhinskoye",
     "OOO ESTETIKA",
+    "Черная кость Юбилейный пр-т",
 ]
 _education_words = [
     "BOOSTY",
     "smart-glocal",
     "YANDEX.CLOUD",
     "SMART GLOCAL",
+    "Boosty.to",
 ]
 _trainers = [
     ("Антон Ч.", 40000),
     ("Андрей П.", 48000),
+    ("Андрей П.", 16000)
 ]
 _sports_words = [
     "FITNESS HOUSE",
@@ -188,6 +218,7 @@ _ozone_words = [
     "WILDBERRIES",
     "Y.M*MARKET.YANDEX",
     "Aliexpress",
+    "Яндекс Маркет",
 ]
 _taxes_words = [
     "Единый налоговый платеж",
@@ -196,6 +227,7 @@ _taxes_words = [
 _cat_words = [
     "SP DOBRYJ DOKTOR",
     "ZOOMAGAZIN",
+    "Четыре Лапы",
 ]
 
 
