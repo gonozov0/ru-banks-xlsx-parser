@@ -42,6 +42,7 @@ _income_filter_words = [
     "Tochka Card2Card",
     "Тинькофф Банк",
     "Т-Банк (Тинькофф)",
+    "Т-Банк                                RUS",
 ]
 
 

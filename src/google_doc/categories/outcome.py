@@ -61,6 +61,9 @@ _food_words = [
     "Трдельник",
     "Кафе",
     "Яндекс Лавка",
+    "Перекрёсток",
+    "SPAR",
+    "Пекарня Хлебница",
 ]
 _gifts_words = [
     "CVETY-BUKETY",
@@ -68,7 +71,9 @@ _gifts_words = [
     "PODARKI",
     "EKATERINBURG YABLOKO",
     "Parfum Oil",
-    "DNS",
+    "Konfety Shokolad Suven",
+    "Кондитерское производство «Метрополь»",
+    "Lavka Vkusnostej",
 ]
 _health_words = [
     "Apteka",
@@ -93,6 +98,7 @@ _household_words = [
     "tome",  # vpn hidemy.name
     "Магнит Косметик",
     "Ростелеком",
+    "МосОблЕИРЦ",
 ]
 _transport_words = [
     "Yandex.Fuel",
@@ -125,6 +131,10 @@ _transport_words = [
     "Яндекс Драйв",
     "РЖД",
     "Яндекс Заправки",
+    "Юрент",
+    "Метро Санкт-Петербург",
+    "Московский транспорт",
+    "Самокаты - Яндекс Go",
 ]
 _entertainment_words = [
     "ONEPRICE",
@@ -171,6 +181,20 @@ _entertainment_words = [
     "FRANK by БАСТА",
     "Шоколадница",
     "Dune",
+    "Moo Moo Burgers",
+    "Буше",
+    "Kafe Tayyaki",
+    "Medved",
+    "ЦЕХ 85",
+    "Pantao Asian Bar",
+    "Skuratov Сoffee",
+    "Taverna Sirtaki",
+    "Ramen Rebel",
+    "RBE Group",
+    "Моремания",
+    "#FARШ",
+    "Кофейня",
+    "Московская Кофейная Сеть",
 ]
 _investments_words = []
 _travel_words = [
@@ -184,6 +208,9 @@ _travel_words = [
     "Яндекс.Путешествия",
     "Аэрофлот",
     "ИНДИВИДУАЛЬНЫЙ ПРЕДПРИНИМАТЕЛЬ БРЕМОВ БРЕМ АБДУКЕРИМОВИЧ",
+    "Выборгский объединенный музей-заповедник",
+    "Музей истории Санкт-Петербурга",
+    "Казанский кафедральный собор",
 ]
 _beauty_words = [
     "Достонбек Н.",
@@ -223,6 +250,7 @@ _ozone_words = [
 _taxes_words = [
     "Единый налоговый платеж",
     "GOSUSLUGI SHTRAFY",
+    "Федеральная Налоговая Служба",
 ]
 _cat_words = [
     "SP DOBRYJ DOKTOR",
